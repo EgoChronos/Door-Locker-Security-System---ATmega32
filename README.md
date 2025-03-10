@@ -7,7 +7,11 @@ This is a final project of my Embedded software basic diploma at "EDGES for trai
 
 A summery of the project: it is a secureity door locking system with authentication protocol and alarm.
 
-the system works with 2 ECUs: HMI which will handle all the interface and user requests and send it to CONTROL to check if valid or not and handle data.
+The system operates using two ECUs (Electronic Control Units):
+
+HMI (Human-Machine Interface): Handles all user interactions and interface requests, then sends them to the CONTROL unit.
+
+CONTROL: Checks if the requests are valid and processes the data accordingly.
   
   System operation overview:
 
