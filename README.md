@@ -11,7 +11,7 @@ The system operates using two ECUs (Electronic Control Units):
 
 HMI (Human-Machine Interface): Handles all user interactions and interface requests, then sends them to the CONTROL unit.
 
-CONTROL: Checks if the requests are valid and processes the data accordingly.
+CONTROL: Checks if the requests are valid and processes the data accordingly. 
   
   System operation overview:
 
