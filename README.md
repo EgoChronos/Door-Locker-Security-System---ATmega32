@@ -6,9 +6,11 @@ Hallo, all.
 This is a final project of my Embedded software basic diploma at "EDGES for training"
 
 A summery of the project: it is a secureity door locking system with authentication protocol and alarm.
+
 the system works with 2 ECUs: HMI which will handle all the interface and user requests and send it to CONTROL to check if valid or not and handle data.
   
   The securtiy protocol is as follows:
+  
   -the system checks if it is your first time using a DEADBEAF.
   -If it is your first time you shall enter a password of five digits then press the button (ON/c) for confirmation.
   -You shall retype the same password again and press (ON/c)
