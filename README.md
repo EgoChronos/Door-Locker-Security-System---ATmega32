@@ -1,57 +1,69 @@
-# Door-Locker-Security-System---ATmega32
-Implemented a door locking mechanism using password authentication, 2 ECUs, and Alarm
+# Door Locker Security System – ATmega32 🔐
+👋 Hello, everyone!
 
-Hallo, all.
+This repository contains the final project from my Embedded Software Basics Diploma at EDGES for Training.
 
-This is a final project of my Embedded software basic diploma at "EDGES for training"
+📝 Project Summary
+This project is a secure door locking system that uses password-based authentication, dual Electronic Control Units (ECUs), and an alarm mechanism for security enforcement.
 
-A summery of the project: it is a secureity door locking system with authentication protocol and alarm.
+🎯 The goal was to design a complete access control system using modular embedded architecture with real-time communication between ECUs.
 
-The system operates using two ECUs (Electronic Control Units):
+🧰 Technologies & Components Used
+Component/Feature	Purpose
+🧠 MCU	ATmega32 Microcontroller
+🧾 HMI ECU	Human-Machine Interface (Keypad + LCD)
+⚙️ Control ECU	Handles logic, password validation, and control
+🎛️ Keypad	User input for password entry
+📺 LCD	Interface feedback
+💾 EEPROM	Stores user credentials
+🔊 Buzzer	Alarm for invalid access attempts
+🚪 DC Motor	Controls door opening/closing
+🔄 Protocols	UART (inter-ECU communication), I2C
+⏱️ Timer	Delay and timeout handling
 
-HMI (Human-Machine Interface): Handles all user interactions and interface requests, then sends them to the CONTROL unit.
+🔐 System Operation Overview
+🔁 First-Time Setup
+Enter a 5-digit password, then press ON/C to confirm.
 
-CONTROL: Checks if the requests are valid and processes the data accordingly. 
-  
-  System operation overview:
+Re-enter the same password for confirmation.
 
-    If it is your first time:
-    
-    Enter a 5-digit password and press the ON/c button to confirm.
-    
-    Retype the same password and press ON/c again.
-    
-    If the passwords don’t match, the system will reject it and ask you to re-enter the password.
-    
-    When the passwords match, the system will display "Password changed successfully," save it in the EEPROM, and store DEADBEAF for future reference.
-    
-    From this point onward, the app will offer two options:
-    
-    Open Door
-    
-    Change Password
-    
-    If you select either option, the app will ask for your password.
-    
-    If the password is correct, the app will proceed with your chosen action:
-    
-    Open Door: The motor will turn to open the door, then automatically close it after a few seconds.
-    
-    Change Password: You can set a new password.
-    
-    After completing either action, the app will return to the main screen with the same two options.
-    
-    If the password is entered incorrectly three times in a row, the system will lock and trigger an alarm.
-    
-    The system will remain locked for a few seconds before returning to its normal state.
-    
-    You can test all these features in the attached Proteus simulation!
+If the two passwords match:
 
+The system saves the password to EEPROM
 
-o	Utilized: GPIO, Keypad, LCD, Timer, UART, I2C, EEPROM, Buzzer, and DC Motor.
+Displays: Password changed successfully
 
-o Microcontroller: ATmega32.
+Stores 0xDEADBEEF as an initialization flag
 
-You can read the full requirements in the attached file.
+🧭 Main Menu Options
+Once a password is set, the system displays:
 
-Thank you.
+🔓 Open Door
+
+🔄 Change Password
+
+🧩 Operation Flow
+User selects an option → System prompts for password
+
+If correct:
+
+🔓 Open Door: Motor opens the door, then automatically closes it
+
+🔄 Change Password: Prompts for a new password and saves it
+
+If incorrect password entered 3 times:
+
+🚨 System locks
+
+🔊 Alarm is triggered via buzzer
+
+System delays input for a few seconds, then resets
+
+🧪 All functionality is available in the attached Proteus simulation file.
+
+📄 Documentation
+📎 You can find the full requirements and simulation setup in the attached project files.
+
+✅ Project Status
+🎉 Completed
+The system is fully functional and tested, with all features working as specified.
